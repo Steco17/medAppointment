@@ -1,7 +1,9 @@
 from django.urls import path, include
-from .views import home
+from .views import HomeTemplateView, AppointmantTemplateView
 
 
 urlpatterns = [
-    path("",home, name="home"),
+    path("",HomeTemplateView.as_view(), name="home"),
+    path("make-an-appointment/",AppointmantTemplateView.as_view(), name="appointment"),
 ]
+ 
